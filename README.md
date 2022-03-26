@@ -57,5 +57,5 @@ Clone the repo
 
 ### Login Page
 
-![](./README/login-page.png)
+<p align="center"><img src="./README/login-page.png" alt="login-page" width="300"/></p>
 <p align="right">(<a href="#top">back to top</a>)</p>
