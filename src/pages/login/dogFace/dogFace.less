@@ -1,0 +1,166 @@
+.dogFace {
+
+  .ear {
+
+    .leftEar {
+      position: absolute;
+      top: -110px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: #243946;
+      left: -135px;
+    }
+
+    .rightEar {
+      position: absolute;
+      top: -110px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: #243946;
+      right: -135px;
+    }
+  }
+
+  .face {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 150px;
+    margin: 80px auto 10px;
+    --rotate-head: 0deg;
+    transform: rotate(var(--rotate-head));
+    transition: transform 0.2s;
+    transform-origin: center 20px;
+
+    .eyes {
+      .leftEye {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: #243946;
+        margin-right: 40px;
+
+        .leftEyeGlow {
+          position: relative;
+          top: 3px;
+          right: -12px;
+          width: 12px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: #fff;
+          transform: rotate(38deg);
+        }
+      }
+
+      .rightEye {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: #243946;
+        margin-left: 40px;
+
+        .rightEyeGlow {
+          position: relative;
+          top: 3px;
+          right: -12px;
+          width: 12px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: #fff;
+          transform: rotate(38deg);
+        }
+      }
+    }
+
+    .nose {
+      position: relative;
+      top: 30px;
+      transform: scale(1.1);
+
+      svg {
+        // width="38.161" height="22.03"
+        width: 38.161px;
+        heigh: 22.03px;
+      }
+
+      .noseGlow {
+        position: absolute;
+        top: 3px;
+        left: 32%;
+        width: 15px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #476375;
+      }
+    }
+
+    .mouse {
+
+      position: relative;
+
+      .smile {
+        svg {
+          position: relative;
+          top: -110px;
+          transform: scaleX(1.2);
+          stroke: #243946;
+        }
+      }
+
+      .mouseHole {
+        position: relative;
+        top: -120px;
+        left: 17px;
+        width: 50px;
+        height: 15px;
+        border-radius: 50%/100% 100% 0% 0;
+        transform: rotate(180deg);
+        background-color: #243946;
+        z-index: -1;
+      }
+
+      .breath {
+        position: relative;
+        top: -133px;
+        width: 30px;
+        left: 27px;
+        height: 20px;
+        background-color: #ffd7dd;
+
+
+        .top {
+          position: absolute;
+          bottom: -15px;
+          width: 30px;
+          height: 30px;
+          border-radius: 15px;
+          background-color: #ffd7dd;
+        }
+
+        .line {
+          position: absolute;
+          top: 0;
+          width: 30px;
+          height: 5px;
+          background-color: #fcb7bf;
+        }
+
+        .middle {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 4px;
+          height: 25px;
+          border-radius: 5px;
+          background-color: #fcb7bf;
+        }
+      }
+    }
+  }
+}
