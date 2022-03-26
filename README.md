@@ -40,12 +40,12 @@ Clone the repo
 
 ### Use
 
- ```
- sh npm install --dependencies  
+ ```sh 
+ npm install --dependencies  
  ```  
 
- ```
- sh npm start  
+ ```sh 
+ npm start  
  ```  
 
 <p align="right">(<a href="#top">back to top</a>)</p>  
