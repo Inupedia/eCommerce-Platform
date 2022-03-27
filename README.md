@@ -13,7 +13,7 @@
     <li>  
       <a href="#about">About</a>  
       <ul>  
-        <li><a href="#login-page">Login Page</a></li>  
+        <li><a href="#outline">Outline</a></li>  
       </ul>  
     </li>  
   </ol>  
@@ -55,7 +55,7 @@ Clone the repo
 
 ## About
 
-### Login Page
+### Outline
 
-<p align="center"><img src="./README/login-page.png" alt="login-page" width="300"/></p>
+<p align="center"><img src="./README/outline.png" alt="login-page" width="500"/></p>
 <p align="right">(<a href="#top">back to top</a>)</p>
