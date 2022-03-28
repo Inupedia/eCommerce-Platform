@@ -1,13 +1,20 @@
 import React from "react";
 import {Form, Input, Button} from 'antd';
 import {UserOutlined, LockOutlined} from '@ant-design/icons';
+import {reqLogin} from '../../api'
 import "./login.less";
 import logo from "./image/icon.png";
 import DogFace from "./dogFace";
 
 const Login = () => {
     const onFinish = (values) => {
-        console.log('Received values of form: ', values);
+        const {username, password} = values
+        // console.log(username, password)
+        reqLogin(username, password).then(res => {
+            console.log("success", res)
+        }).catch(err => {
+            console.log("failed", +err)
+        })
     };
     return (
         <div className="login">
@@ -49,7 +56,6 @@ const Login = () => {
                             placeholder="Password"
                         />
                     </Form.Item>
-
                     <Form.Item>
                         <Button type="primary" htmlType="submit" className="login-form-button">
                             Log in
