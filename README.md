@@ -28,7 +28,7 @@ You can either left click green button "Code" to download the zip file or clone 
 
 ### Prerequisites
 
-<a href="https://nodejs.org/en/">_Node.js_</a>
+<a href="https://nodejs.org/en/">_Node.js_</a> & <a href="https://www.mongodb.com/docs/manual/installation/">_MongoDB_</a>
 
 ### Clone
 
