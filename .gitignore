@@ -2,9 +2,11 @@
 
 # IDEA
 /.idea
+/server/.idea
 
 # dependencies
 /node_modules
+/server/node_modules
 /.pnp
 .pnp.js
 
