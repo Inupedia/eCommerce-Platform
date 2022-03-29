@@ -2,14 +2,14 @@ import React from "react"
 import './App.less'
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Login from "./pages/login/login"
-import Admin from "./pages/admin/admin"
+import Dashboard from "./pages/dashboard/dashboard";
 
 export default function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route index element={<Login/>}></Route>
-                <Route path="dashboard" element={<Admin/>}></Route>
+                <Route path="/" element={<Dashboard/>}></Route>
+                <Route path="/login" element={<Login/>}></Route>
             </Routes>
         </BrowserRouter>
     );

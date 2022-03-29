@@ -3,9 +3,10 @@ import {useNavigate} from 'react-router-dom';
 import {message, Form, Input, Button} from 'antd';
 import {UserOutlined, LockOutlined} from '@ant-design/icons';
 import {reqLogin} from '../../api'
+import memoryUtils from '../../utils/memoryUtils'
+import storageUtils from '../../utils/storageUtils'
 import "./login.less";
-import logo from "./image/icon.png";
-import DogFace from "./dogFace";
+import DogFace from "../../components/dogFace";
 
 const Login = () => {
     const navigate = useNavigate();
@@ -13,9 +14,12 @@ const Login = () => {
         const {username, password} = values
         const response = await reqLogin(username, password)
         // console.log(response.data)
-        const result = response.data //status: 0 success, 1 fail
+        const result = response.data // success: {status: 0, data}, fail: {status: 1, msg}
         if (result.status === 0) {
-            navigate('dashboard', {replace: true})
+            message.success('login success')
+            memoryUtils.user = result.data
+            storageUtils.saveUser(result.data)
+            navigate('/', {replace: true})
         } else {
             message.error(result.msg)
         }
@@ -23,7 +27,7 @@ const Login = () => {
     return (
         <div className="login">
             <header className="login-header">
-                <img src={logo} alt="logo"/>
+                <img alt="logo"/>
                 <svg viewBox="0 0 106 32" focusable="false" tabIndex="-1" aria-hidden="true" height="46" width="155"
                      className="logo-header-title">
                     <path

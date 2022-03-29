@@ -16,7 +16,8 @@ router.post('/login', function (req, res) {
         .then(user => {
             if (user) {
                 res.cookie('userid', user._id)
-                res.send({status: 0, msg: 'log in success'})
+                const {create_time, password, ...responseData} = user._doc // response without password & create time
+                res.send({status: 0, data: responseData})
             } else {
                 res.send({status: 1, msg: 'incorrect username or password'})
             }
