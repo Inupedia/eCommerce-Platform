@@ -1,5 +1,6 @@
-import React from "react";
-import {Form, Input, Button} from 'antd';
+import React from 'react';
+import {useNavigate} from 'react-router-dom';
+import {message, Form, Input, Button} from 'antd';
 import {UserOutlined, LockOutlined} from '@ant-design/icons';
 import {reqLogin} from '../../api'
 import "./login.less";
@@ -7,14 +8,17 @@ import logo from "./image/icon.png";
 import DogFace from "./dogFace";
 
 const Login = () => {
-    const onFinish = (values) => {
+    const navigate = useNavigate();
+    const onFinish = async (values) => {
         const {username, password} = values
-        // console.log(username, password)
-        reqLogin(username, password).then(res => {
-            console.log("success", res)
-        }).catch(err => {
-            console.log("failed", +err)
-        })
+        const response = await reqLogin(username, password)
+        // console.log(response.data)
+        const result = response.data //status: 0 success, 1 fail
+        if (result.status === 0) {
+            navigate('dashboard', {replace: true})
+        } else {
+            message.error(result.msg)
+        }
     };
     return (
         <div className="login">

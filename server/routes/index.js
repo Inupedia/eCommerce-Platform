@@ -18,7 +18,7 @@ router.post('/login', function (req, res) {
                 res.cookie('userid', user._id)
                 res.send({status: 0, msg: 'log in success'})
             } else {
-                res.send({status: 1, msg: 'Incorrect username or password'})
+                res.send({status: 1, msg: 'incorrect username or password'})
             }
         })
         .catch(error => {
@@ -48,6 +48,20 @@ router.post('/manage/user/add', function (req, res) {
             res.send({status: 1, msg: 'Error with adding new user'})
         })
 })
+/* get users info */
+router.get('/manage/user/list', function (req, res) {
+    UserModel.find({username: {'$ne': 'admin'}})
+        .then(users => {
+            RoleModel.find().then(roles => {
+                res.send({status: 0, data: {users, roles}})
+            })
+        })
+        .catch(error => {
+            console.error('Error', error)
+            res.send({status: 1, msg: 'Please retry'})
+        })
+})
+
 /* User Modify Route*/
 /* User Delete Route*/
 

@@ -8,8 +8,8 @@ export default function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Login/>}></Route>
-                <Route path="admin" element={<Admin/>}></Route>
+                <Route index element={<Login/>}></Route>
+                <Route path="dashboard" element={<Admin/>}></Route>
             </Routes>
         </BrowserRouter>
     );
