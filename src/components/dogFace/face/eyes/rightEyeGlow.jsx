@@ -1,5 +1,5 @@
 import React from "react";
-import "../../dogFace.less"
+import "../../index.less"
 
 export default function RightEyeGlow() {
     return <div className="rightEyeGlow"></div>

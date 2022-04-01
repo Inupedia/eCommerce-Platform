@@ -1,5 +1,5 @@
 import React from "react";
-import "../../dogFace.less"
+import "../../index.less"
 import Top from "./breath/top"
 import Line from "./breath/line"
 import Middle from "./breath/middle"

@@ -6,7 +6,7 @@ const RoleModel = require('../models/RoleModel');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    res.render('index', {title: 'Express'});
+    res.render('index', {title: `Inupedia's Backend Server`});
 });
 
 /* User Login Route*/

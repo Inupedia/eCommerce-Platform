@@ -1,5 +1,5 @@
 import React from "react";
-import "../../dogFace.less"
+import "../../index.less"
 import NoseGlow from "./noseGlow";
 
 export default function Nose() {

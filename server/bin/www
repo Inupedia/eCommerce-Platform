@@ -4,22 +4,15 @@ var app = require('../app');
 var debug = require('debug')('server:server');
 var http = require('http');
 const mongoose = require('mongoose')
+const dotenv = require('dotenv').config()
 
-
-// connect to database
-mongoose.connect('mongodb://localhost:27017/shopping', {useNewUrlParser: true})
-    .then(() => {
-        console.log("successfully connect to database")
-        // only start server when connecting to database
-        startServer('4000')
-    })
-    .catch(error => {
-        console.error('Please start your mongo database', error)
-    })
-
+// connect to mongoDB
+const connectDB = require('./db')
+if (connectDB()) {
+    startServer('4000')
+}
 
 function startServer(customizedPort) {
-
     var port = normalizePort(process.env.PORT || customizedPort);
     app.set('port', port);
 
@@ -30,7 +23,7 @@ function startServer(customizedPort) {
         console.log('Server staring error')
     });
     server.on('listening', function (listening) {
-        console.log(`Server listening on http://localhost:${customizedPort}`)
+        console.log(`Server listening on http://localhost:${port}`)
     });
 }
 
