@@ -41,10 +41,15 @@ Clone the repo
 ### Use
 
  ```sh 
- npm install --dependencies  
+ # package install front end
+ yarn install   
+ # package install server
+ cd server
+ yarn install
  ```  
 
  ```sh 
+ # under main repository file
  npm start  
  ```  
 
@@ -57,5 +62,5 @@ Clone the repo
 
 ### Outline
 
-<p align="center"><img src="./README/outline.png" alt="login-page" width="500"/></p>
+<p align="center"><img src="./README/outline.png" alt="login-page" width="800"/></p>
 <p align="right">(<a href="#top">back to top</a>)</p>
