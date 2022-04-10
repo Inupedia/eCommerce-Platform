@@ -24,12 +24,12 @@ const menuList = [
         icon: <ShopOutlined />,
         children: [
             {
-                title: 'product',
+                title: 'Product',
                 key: '/item/product',
                 icon: <AppstoreOutlined />,
             },
             {
-                title: 'category',
+                title: 'Category',
                 key: '/item/category',
                 icon: <ToolOutlined />,
             }
@@ -69,30 +69,5 @@ const menuList = [
     }
 
 ]
-{/*<Menu.Item key="home" icon={<HomeOutlined />} title="Home">*/}
-{/*    <Link to="home"></Link>*/}
-{/*    <span>Home</span>*/}
-{/*</Menu.Item>*/}
-{/*<SubMenu key="dashboard" icon={<DashboardOutlined/>} title="Dashboard">*/}
-{/*    <Menu.Item key="1">Analysis</Menu.Item>*/}
-{/*    <Menu.Item key="2">Monitor</Menu.Item>*/}
-{/*</SubMenu>*/}
-{/*<SubMenu key="form" icon={<FormOutlined/>} title="Form">*/}
-{/*    <Menu.Item key="3">New Form</Menu.Item>*/}
-{/*</SubMenu>*/}
-{/*<SubMenu key="user" icon={<UserOutlined/>} title="User">*/}
-{/*</SubMenu>*/}
-{/*<SubMenu key="product" icon={<TableOutlined/>} title="Product">*/}
-{/*    <Menu.Item key="manage-products" >*/}
-{/*    <Link to="product"></Link>*/}
-{/*        <span>products</span>*/}
-{/*    </Menu.Item>*/}
-{/*    <Menu.Item key="product-category">*/}
-{/*    <Link to="category"></Link>*/}
-{/*        <span>Category</span>*/}
-{/*    </Menu.Item>*/}
-{/*</SubMenu>*/}
-{/*<Menu.Item key="file" icon={<FileOutlined/>}>*/}
-{/*    Files*/}
-{/*</Menu.Item>*/}
+
 export default menuList

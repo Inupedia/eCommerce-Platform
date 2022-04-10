@@ -1,9 +1,8 @@
 import React from "react";
-import {useLocation, Navigate, Routes, Route, BrowserRouter} from "react-router-dom"
-import {message, Layout, Button} from 'antd'
+import {useLocation, Navigate, Routes, Route} from "react-router-dom"
+import {Layout} from 'antd'
 import './dashboard.less'
 import memoryUtils from '../../utils/memoryUtils'
-import storageUtils from "../../utils/storageUtils"
 import LeftNavbar from "../../components/leftNavbar"
 import Header from "../../components/header"
 import Home from "../home/home"
@@ -20,15 +19,10 @@ const {Content, Footer, Sider} = Layout;
 export default function Dashboard() {
     const location = useLocation()
     const user = memoryUtils.user
-    let collapsedState = false;
     if (!user._id) {
         return <Navigate to="/login" state={{from: location}} replace/>;
     }
 
-    const onclick = () => {
-        storageUtils.removeUser()
-        message.success('log out successfully')
-    }
     return (
         <Layout className="dashboard">
             <Sider>

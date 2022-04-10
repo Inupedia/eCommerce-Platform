@@ -6,7 +6,8 @@ import menuList from '../../config/menuConfig'
 const {SubMenu} = Menu;
 
 export default function LeftNavbar() {
-    const {mounted} = useState(false)
+
+    const [mounted] = useState(false)
     let location = useLocation();
     let pathName = location.pathname;
     let menuNode;
@@ -24,7 +25,6 @@ export default function LeftNavbar() {
             } else {
                 if (item.children.find(child => child.key === pathName)) {
                     openKey = item.key
-                    console.log(openKey)
                 }
                 return (
                     <SubMenu key={item.key} icon={item.icon} title={item.title}>
