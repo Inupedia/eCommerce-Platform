@@ -2,19 +2,11 @@ import React, {useState} from "react";
 import {Link, useLocation} from "react-router-dom";
 import "./index.less"
 import {Menu, Button} from 'antd';
-import {
-    HomeOutlined,
-    DashboardOutlined,
-    TableOutlined,
-    FormOutlined,
-    UserOutlined,
-    FileOutlined,
-} from '@ant-design/icons';
 import menuList from '../../config/menuConfig'
 const {SubMenu} = Menu;
 
 export default function LeftNavbar() {
-    const [mounted] = useState(false)
+    const {mounted} = useState(false)
     let location = useLocation();
     let pathName = location.pathname;
     let menuNode;

@@ -35,8 +35,8 @@ export default function Dashboard() {
                 <LeftNavbar/>
             </Sider>
             <Layout>
-                <Header>Header</Header>
-                <Content>
+                <Header/>
+                <Content style={{margin: 20, backgroundColor: '#fff'}}>
                         <Routes>
                             <Route path="home" element={<Home/>}></Route>
                             <Route path="user" element={<User/>}></Route>
