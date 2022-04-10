@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from "react";
 import {useNavigate, useLocation} from "react-router-dom";
-import { Modal, Button } from 'antd';
+import { Modal } from 'antd';
 import {reqWeather} from "../../api";
+import LinkButton from "../linkButton";
 import memoryUtils from "../../utils/memoryUtils"
 import storageUtils from "../../utils/storageUtils"
 import menuList from '../../config/menuConfig'
@@ -58,7 +59,8 @@ export default function Header() {
     return <div className="header">
         <div className="header-top">
             <span>Hello, {username}</span>
-            <a href="#" onClick={logout}>log out</a>
+            {/*<a href="#" onClick={logout}>log out</a>*/}
+            <LinkButton onClick={logout}>LOGOUT</LinkButton>
         </div>
         <div className="header-bottom">
             <div className={"header-bottom-left"}>
