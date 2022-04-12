@@ -39,7 +39,6 @@ export const reqWeather = (city, apiKey) => {
     })
 }
 
-
 // add
 export const reqAddUser = (user) => ajax('/manage/user/add', user, 'POST')
 
